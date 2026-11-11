@@ -1,0 +1,4 @@
+olefile==0.47
+pdfplumber
+# For scanned PDFs, ocr_sources.py uses the existing local PaddleOCR 3.5
+# environment with PP-OCRv5_server_det / PP-OCRv5_server_rec and pypdfium2.

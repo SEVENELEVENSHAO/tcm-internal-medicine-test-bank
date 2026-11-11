@@ -58,7 +58,7 @@ def main():
             for d in s['diagnostics']:
                 lines.append(f'| {cell(d.get("chapter"))} | {cell(TYPE_NAMES.get(d.get("type"),d.get("type")))} | {cell(d.get("number"))} | {cell(d["issue"])} |')
             lines.append('')
-    text='\n'.join(lines)+'\n'
+    text='\n'.join(lines).rstrip()+'\n'
     (BASE/'docs/import-report.md').write_text(text,encoding='utf-8')
     (BASE.parent/'金匮要略导入报告.md').write_text(text,encoding='utf-8')
     db.close()
